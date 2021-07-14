@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.TelefonoController">
+   <children>
+      <Label layoutX="251.0" layoutY="14.0" text="Telefono Medico" textFill="#4400ff">
+         <font>
+            <Font name="Garamond" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="61.0" prefHeight="22.0" prefWidth="109.0" text="Telefono Personal" />
+      <Label layoutX="33.0" layoutY="95.0" prefHeight="22.0" prefWidth="92.0" text="Telefono Laboral" />
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="147.0" layoutY="60.0" prefHeight="25.0" prefWidth="125.0">
+         <effect>
+            <InnerShadow color="#006fff" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblMedicoT" layoutX="16.0" layoutY="189.0" onKeyPressed="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="189.0" prefWidth="659.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="162.0" text="Codigo" />
+            <TableColumn fx:id="colPersonal" prefWidth="152.0" text="Telefono Personal" />
+            <TableColumn fx:id="colLaboral" prefWidth="155.0" text="Telefono Laboral" />
+            <TableColumn fx:id="colCodM" prefWidth="189.0" text="codigo Medico" />
+         </columns>
+         <effect>
+            <InnerShadow color="#82828a" height="255.0" radius="127.0" width="255.0" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="79.0" layoutY="384.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="59.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="147.0" layoutY="384.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="67.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="227.0" layoutY="384.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="59.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="302.0" layoutY="384.0" mnemonicParsing="false" onAction="#reporte" prefHeight="29.0" prefWidth="67.0" text="Reporte" />
+      <ImageView fitHeight="114.0" fitWidth="82.0" layoutX="585.0" layoutY="14.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/37049.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtTelefonoLaboral" editable="false" layoutX="147.0" layoutY="94.0" prefHeight="25.0" prefWidth="125.0">
+         <effect>
+            <InnerShadow color="#006fff" />
+         </effect>
+      </TextField>
+      <Label layoutX="39.0" layoutY="144.0" text="codigo Medico" />
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="139.0" layoutY="140.0" prefWidth="150.0" />
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN">
+         <input>
+            <DropShadow color="#949191" />
+         </input>
+      </InnerShadow>
+   </effect>
+</AnchorPane>

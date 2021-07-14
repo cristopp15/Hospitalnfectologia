@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.AreaController">
+   <children>
+      <Label layoutX="266.0" layoutY="14.0" text="Areas" textFill="#4400ff">
+         <font>
+            <Font name="Garamond" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="95.0" prefHeight="22.0" prefWidth="120.0" text="Nombre Areas" />
+      <TextField fx:id="txtNombreArea" editable="false" layoutX="153.0" layoutY="94.0" prefHeight="25.0" prefWidth="387.0">
+         <effect>
+            <InnerShadow color="#0672ff" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblAreas" layoutX="31.0" layoutY="169.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="620.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="296.0" text="Codigo" />
+            <TableColumn fx:id="colNombreArea" prefWidth="323.0" text="Nombre de Area" />
+         </columns>
+         <effect>
+            <InnerShadow color="#82828a" height="255.0" radius="127.0" width="255.0" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="66.0" layoutY="382.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="59.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="139.0" layoutY="382.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="67.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="219.0" layoutY="382.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="59.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="293.0" layoutY="382.0" mnemonicParsing="false" onAction="#reporte" prefHeight="29.0" prefWidth="67.0" text="Reporte" />
+      <ImageView fitHeight="114.0" fitWidth="82.0" layoutX="585.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/kisspng-royalty-free-symbol-blue-green-computer-icons-patient-5abe97749868d1.4274822915224400526243.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN">
+         <input>
+            <DropShadow color="#949191" />
+         </input>
+      </InnerShadow>
+   </effect>
+</AnchorPane>

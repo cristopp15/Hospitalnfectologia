@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.ProgramadorController">
+   <children>
+      <Label layoutX="214.0" layoutY="27.0" text="PROGRAMADOR" textFill="#4400ff">
+         <font>
+            <Font name="Garamond" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="117.0" prefHeight="27.0" prefWidth="264.0" text="Cristopher Raul Lopez Pineda">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="144.0" prefHeight="31.0" prefWidth="172.0" text="Carné: 2018-102">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="175.0" prefHeight="30.0" prefWidth="158.0" text="IN5AM - PE5AM">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="51.0" layoutY="206.0" prefHeight="22.0" prefWidth="92.0" text="Clave: 21">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="371.0" fitWidth="227.0" layoutX="414.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/PicsArt_05-18-11.48.41.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="92.0" layoutX="14.0" layoutY="365.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/atras.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="89.0" text="CENTRO EDUCATIVO TECNICO LABORAL KINAL">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN">
+         <input>
+            <DropShadow color="#949191" />
+         </input>
+      </InnerShadow>
+   </effect>
+</AnchorPane>

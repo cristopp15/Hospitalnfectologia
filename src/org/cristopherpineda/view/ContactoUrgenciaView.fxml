@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.ContactoController">
+   <children>
+      <Label layoutX="248.0" layoutY="14.0" text="Contacto Urgencia" textFill="#4400ff">
+         <font>
+            <Font name="Garamond" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="95.0" prefHeight="22.0" prefWidth="92.0" text="Nombres" />
+      <Label layoutX="33.0" layoutY="129.0" prefHeight="22.0" prefWidth="92.0" text="Apellidos" />
+      <TextField fx:id="txtNombres" editable="false" layoutX="125.0" layoutY="93.0" prefHeight="25.0" prefWidth="387.0">
+         <effect>
+            <InnerShadow color="#0672ff" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="125.0" layoutY="127.0" prefHeight="25.0" prefWidth="387.0">
+         <effect>
+            <InnerShadow color="#0062ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="33.0" layoutY="167.0" prefHeight="22.0" prefWidth="119.0" text="Telefono" />
+      <TextField fx:id="txtNumeroContacto" editable="false" layoutX="127.0" layoutY="166.0" prefHeight="25.0" prefWidth="143.0">
+         <effect>
+            <InnerShadow color="#007bff" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblContactoUrgencia" layoutX="10.0" layoutY="272.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="147.0" prefWidth="533.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="83.0" text="Codigo" />
+            <TableColumn fx:id="colNombres" prefWidth="96.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="101.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" prefWidth="96.0" text="Telefono" />
+            <TableColumn fx:id="colCodP" prefWidth="127.0" text="Codigo del Paciente" />
+         </columns>
+         <effect>
+            <InnerShadow color="#82828a" height="255.0" radius="127.0" width="255.0" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="79.0" layoutY="442.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="59.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="143.0" layoutY="442.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="67.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="225.0" layoutY="442.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="59.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="297.0" layoutY="442.0" mnemonicParsing="false" onAction="#reporte" prefHeight="29.0" prefWidth="67.0" text="Reporte" />
+      <ImageView fitHeight="114.0" fitWidth="82.0" layoutX="585.0" layoutY="14.0" onMouseClicked="#ventanaPaciente" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/kisspng-royalty-free-symbol-blue-green-computer-icons-patient-5abe97749868d1.4274822915224400526243.jpg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodPaciente" layoutX="135.0" layoutY="208.0" prefWidth="150.0" />
+      <Label layoutX="33.0" layoutY="209.0" prefHeight="22.0" prefWidth="119.0" text="Codigo Paciente" />
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN">
+         <input>
+            <DropShadow color="#949191" />
+         </input>
+      </InnerShadow>
+   </effect>
+</AnchorPane>

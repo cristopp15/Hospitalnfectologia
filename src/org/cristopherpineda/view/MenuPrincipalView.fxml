@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="339.0" fitWidth="600.0" layoutY="-4.0" opacity="0.47" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hospital2.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="388.0" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaPaciente" text="Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMedicos" text="Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEspecialidad" text="Especialidades" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaArea" text="Areas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Reporte Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Acerca de">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="Programador" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DropShadow height="255.0" radius="127.0" spread="0.58" width="255.0" />
+         </effect>
+      </MenuBar>
+      <ImageView fitHeight="55.0" fitWidth="59.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hospital-icono-png-8.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

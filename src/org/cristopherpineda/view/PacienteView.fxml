@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.cristopherpineda.controller.PacienteController">
+   <children>
+      <Label layoutX="314.0" layoutY="14.0" text="Pacientes" textFill="#4400ff">
+         <font>
+            <Font name="Garamond" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="62.0" prefHeight="22.0" prefWidth="82.0" text="DPI" />
+      <Label layoutX="33.0" layoutY="95.0" prefHeight="22.0" prefWidth="92.0" text="Nombres" />
+      <Label layoutX="33.0" layoutY="129.0" prefHeight="22.0" prefWidth="92.0" text="Apellidos" />
+      <TextField fx:id="txtDPI" editable="false" layoutX="125.0" layoutY="60.0" prefHeight="25.0" prefWidth="125.0">
+         <effect>
+            <InnerShadow color="#006fff" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtNombres" editable="false" layoutX="125.0" layoutY="93.0" prefHeight="25.0" prefWidth="387.0">
+         <effect>
+            <InnerShadow color="#0672ff" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidos" editable="false" layoutX="125.0" layoutY="127.0" prefHeight="25.0" prefWidth="387.0">
+         <effect>
+            <InnerShadow color="#0062ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="33.0" layoutY="167.0" prefHeight="22.0" prefWidth="119.0" text="Fecha de Nacimiento" />
+      <Label layoutX="284.0" layoutY="166.0" prefHeight="22.0" prefWidth="92.0" text="Edad" />
+      <TextField fx:id="txtEdad" editable="false" layoutX="322.0" layoutY="165.0" prefHeight="25.0" prefWidth="67.0">
+         <effect>
+            <InnerShadow color="#0055ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="33.0" layoutY="199.0" prefHeight="22.0" prefWidth="92.0" text="Direccion" />
+      <TextField fx:id="txtDireccion" editable="false" layoutX="126.0" layoutY="198.0" prefHeight="25.0" prefWidth="488.0">
+         <effect>
+            <InnerShadow color="#004eff" />
+         </effect>
+      </TextField>
+      <Label layoutX="159.0" layoutY="239.0" prefHeight="22.0" prefWidth="35.0" text="Sexo" />
+      <TextField fx:id="txtSexo" editable="false" layoutX="193.0" layoutY="237.0" prefHeight="25.0" prefWidth="294.0">
+         <effect>
+            <InnerShadow color="#005ef5" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblPacientes" layoutX="10.0" layoutY="272.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="147.0" prefWidth="767.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="83.0" text="Codigo" />
+            <TableColumn fx:id="colDPI" prefWidth="96.0" text="DPI" />
+            <TableColumn fx:id="colNombres" prefWidth="101.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="96.0" text="Apellidos" />
+            <TableColumn fx:id="colFechaDeNacimiento" prefWidth="127.0" text="Fecha de Nacimiento" />
+            <TableColumn fx:id="colEdad" prefWidth="59.0" text="Edad" />
+            <TableColumn fx:id="colOcupacion" prefWidth="88.0" text="Ocupacion" />
+            <TableColumn fx:id="colDireccion" minWidth="4.0" prefWidth="59.0" text="Direccion" />
+            <TableColumn fx:id="colSexo" minWidth="0.0" prefWidth="57.0" text="Sexo" />
+         </columns>
+         <effect>
+            <InnerShadow color="#82828a" height="255.0" radius="127.0" width="255.0" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="78.0" layoutY="442.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="59.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="143.0" layoutY="442.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="67.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="225.0" layoutY="442.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="59.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="297.0" layoutY="442.0" mnemonicParsing="false" onAction="#reporte" prefHeight="29.0" prefWidth="67.0" text="Reporte" />
+      <ImageView fitHeight="114.0" fitWidth="82.0" layoutX="585.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/kisspng-royalty-free-symbol-blue-green-computer-icons-patient-5abe97749868d1.4274822915224400526243.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtOcupacion" editable="false" layoutX="460.0" layoutY="166.0" prefHeight="25.0" prefWidth="136.0">
+         <effect>
+            <InnerShadow color="#0055ff" />
+         </effect>
+      </TextField>
+      <Label layoutX="396.0" layoutY="166.0" prefHeight="22.0" prefWidth="92.0" text="Ocupacion" />
+      <GridPane fx:id="grpFecha" layoutX="146.0" layoutY="162.0" prefHeight="103.0" prefWidth="246.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <MenuBar layoutX="15.0" layoutY="14.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaContacto" text="Contacto Urgencia" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <effect>
+      <InnerShadow blurType="GAUSSIAN">
+         <input>
+            <DropShadow color="#949191" />
+         </input>
+      </InnerShadow>
+   </effect>
+</AnchorPane>
